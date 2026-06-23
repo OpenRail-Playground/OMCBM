@@ -1,6 +1,11 @@
 import dotenv
 import mobility
 
+# Data to get and push in /data/germany before running this:
+# - "DE_VG250.gpkg" (https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/aktuell/vg250_01-01.utm32s.gpkg.ebenen.zip)
+# - "MiD23_SAE_Regionalisierung-von-MiD-Ergebnissen_Gemeindedaten.xlsx" (https://www.mobilitaet-in-deutschland.de/pdf/MiD23_SAE_Regionalisierung-von-MiD-Ergebnissen_Gemeindedaten.xlsx)
+# - "raumgliederungen-referenzen-2024.xlsx" (https://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Raumabgrenzungen/downloads/raumgliederungen-referenzen-2024.xlsx?__blob=publicationFile&v=6)
+
 dotenv.load_dotenv()
 
 mobility.set_params(package_data_folder_path="./data", project_data_folder_path="./data")
