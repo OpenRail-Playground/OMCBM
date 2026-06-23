@@ -572,7 +572,7 @@ class GermanGTFS(GTFSDataSource):
         )
         if coverage_geometry is None:
             raise ValueError(
-                "Could not build Swiss GTFS coverage from stops.txt for "
+                "Could not build German GTFS coverage from stops.txt for "
                 f"{self.feed_page_url}."
             )
 
@@ -581,7 +581,7 @@ class GermanGTFS(GTFSDataSource):
             country=self.country,
             provider=self.provider,
             dataset_id=dataset_id,
-            resource_id=resource_id
+            resource_id=resource_id,
             title="Germany Full",
             download_url=self.feed_page_url,
             gtfs_file_date=gtfs_file_date,
