@@ -15,7 +15,8 @@ transport_zones.get().to_file("./data/test.geojson")
 
 # TODO
 # # Create a synthetic population of 1000 people for the area.
-# population = mobility.Population(transport_zones, sample_size=1000)
+population = mobility.Population(transport_zones, sample_size=1000)
+# print(population.create_and_get_asset())
 
 # # TODO
 # # Simulate trips for this population with car, walk, and bicycle.
