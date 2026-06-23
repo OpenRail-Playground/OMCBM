@@ -11,8 +11,9 @@ dotenv.load_dotenv()
 mobility.set_params(package_data_folder_path="./data", project_data_folder_path="./data")
 
 # de-083155012074 = Müllheim im Markgräflerland
-transport_zones = mobility.TransportZones("de-083155012074", radius=10.0)
-print(transport_zones.countries)
+# (GKZ = 8315074) depuis la survey MiD ??
+transport_zones = mobility.TransportZones("de-083155012074", radius=1000.0, backend="python")
+transport_zones.remove().get().to_file("/app/transport_zones.geojson")
 
 # TODO
 survey = mobility.EMPMobilitySurvey()
