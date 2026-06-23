@@ -13,7 +13,7 @@ mobility.set_params(package_data_folder_path="./data", project_data_folder_path=
 
 # de-083155012074 = Müllheim im Markgräflerland
 # (GKZ = 8315074) depuis la survey MiD ??
-transport_zones = mobility.TransportZones("de-083155012074", radius=1000.0, backend="python")
+transport_zones = mobility.TransportZones("de-083155012074", radius=200.0, backend="python")
 transport_zones.remove().get().to_file("/app/transport_zones.geojson")
 
 # TODO
