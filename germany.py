@@ -1,5 +1,6 @@
 import dotenv
 import mobility
+from mobility.trips.group_day_trips.core.parameters import GroupDayTripsActivitySequenceParameters, GroupDayTripsDestinationSequenceParameters, GroupDayTripsModeSequenceParameters, GroupDayTripsPlanUpdateParameters
 
 # Data to get and push in /data/germany before running this:
 # - "DE_VG250.gpkg" (https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/aktuell/vg250_01-01.utm32s.gpkg.ebenen.zip)
