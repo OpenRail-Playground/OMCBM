@@ -1,7 +1,7 @@
-from mobility.spatial.admin_units import FrenchAdminUnits, GermanAdminUnits, SwissAdminUnits
+from mobility.spatial.admin_units import FrenchAdminUnits, GermanAdminUnits#, SwissAdminUnits
 from mobility.spatial.france import FrenchLocalAdminUnitsCategories
 from mobility.spatial.germany import GermanLocalAdminUnitsCategories
-from mobility.spatial.switzerland import SwissLocalAdminUnitsCategories
+# from mobility.spatial.switzerland import SwissLocalAdminUnitsCategories
 
 
 def available_admin_units():
