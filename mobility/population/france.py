@@ -106,4 +106,5 @@ class FrenchPopulationGroups:
             ]
         ]
         pop_groups["country"] = "fr"
+
         return pop_groups

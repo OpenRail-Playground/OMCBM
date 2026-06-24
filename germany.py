@@ -16,7 +16,7 @@ survey = mobility.EMPMobilitySurvey()
 # TODO
 # # Create a synthetic population of 1000 people for the area.
 population = mobility.Population(transport_zones, sample_size=1000)
-# print(population.create_and_get_asset())
+population.create_and_get_asset()
 
 # # TODO
 population_trips = mobility.PopulationGroupDayTrips(
@@ -35,9 +35,9 @@ population_trips = mobility.PopulationGroupDayTrips(
     parameters=mobility.GroupDayTripsParameters(
         run=mobility.GroupDayTripsRunParameters(n_iterations=5),
     ),
-    activity_sequences=GroupDayTripsActivitySequenceParameters(
-        k_activity_sequences=3,
-    ),
+    # activity_sequences=GroupDayTripsActivitySequenceParameters(
+    #     k_activity_sequences=3,
+    # ),
     destination_sequences=GroupDayTripsDestinationSequenceParameters(
         k_destination_sequences=3,
         alpha=0.25,

@@ -56,7 +56,6 @@ class GermanLocalAdminUnitsCategories(FileAsset):
         categories = categories.iloc[:, [1, 52]]
         categories.columns = ["local_admin_unit_id", "urban_unit_category"]
         categories["local_admin_unit_id"] = "de-" + categories["local_admin_unit_id"].astype(str)
-        breakpoint()
-        categories["urban_unit_category"] = mapping_dictionary[categories["urban_unit_category"]]
+        categories["urban_unit_category"] = categories["urban_unit_category"].map(mapping_dictionary)
         categories.to_parquet(self.cache_path)
         return categories
