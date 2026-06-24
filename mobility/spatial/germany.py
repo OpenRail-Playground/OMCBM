@@ -35,8 +35,18 @@ class GermanLocalAdminUnitsCategories(FileAsset):
             local_admin_unit_ids,
             ["local_admin_unit_id", "urban_unit_category"],
         )
+    
 
     def create_and_get_asset(self) -> pd.DataFrame:
+        mapping_dictionary = {
+            11: "C",
+            12: "I",
+            21: "B",
+            22: "B",
+            30: "B",
+            40: "R",
+            50: "R"
+        }
         path = "data/germany/raumgliederungen-referenzen-2024.xlsx"
         categories = pd.read_excel(
             path,
@@ -46,5 +56,7 @@ class GermanLocalAdminUnitsCategories(FileAsset):
         categories = categories.iloc[:, [1, 52]]
         categories.columns = ["local_admin_unit_id", "urban_unit_category"]
         categories["local_admin_unit_id"] = "de-" + categories["local_admin_unit_id"].astype(str)
+        breakpoint()
+        categories["urban_unit_category"] = mapping_dictionary[categories["urban_unit_category"]]
         categories.to_parquet(self.cache_path)
         return categories

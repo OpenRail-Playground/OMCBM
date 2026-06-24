@@ -52,12 +52,13 @@ class LocalAdminUnitsCategories(FileAsset):
         return pd.concat(categories, ignore_index=True)
 
     def create_and_get_asset(self) -> pd.DataFrame:
+        logging.info("self",self)
         logging.info("Preparing local administrative unit categories.")
 
         categories = []
+        logging.info(self.inputs["categories_by_country"].values())
         for country_categories in self.inputs["categories_by_country"].values():
             categories.append(country_categories.get())
-
         local_admin_units = pd.concat(categories, ignore_index=True)
         local_admin_units.to_parquet(self.cache_path)
         return local_admin_units

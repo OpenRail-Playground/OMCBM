@@ -7,7 +7,7 @@ from mobility.spatial.germany import GermanLocalAdminUnitsCategories
 def available_admin_units():
     """Return built-in admin-unit data by country."""
     return {
-        # "fr": (FrenchAdminUnits, "commune"),
+        "fr": (FrenchAdminUnits, "commune"),
         # "ch": (SwissAdminUnits, "municipality"),
         "de": (GermanAdminUnits, "gemeinde"),
     }
@@ -16,7 +16,7 @@ def available_admin_units():
 def available_local_admin_unit_categories():
     """Return built-in local-admin-unit category data by country."""
     return {
-        # "fr": FrenchLocalAdminUnitsCategories(),
+        "fr": FrenchLocalAdminUnitsCategories(),
         # "ch": SwissLocalAdminUnitsCategories(),
         "de": GermanLocalAdminUnitsCategories(),
     }
